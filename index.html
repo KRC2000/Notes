@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .sub {
+        padding-left: 2cm;
+    }
+
+    * {
+        font-family: "Lucida Console", "Courier New", monospace;
+        font-size: 1.1em;
+    }
+
+    body {
+        background-color: darkolivegreen;
+    }
+</style>
+
+<body>
+
+    <h1>My notes</h1>
+
+    <!--Git-->
+    <details>
+        <summary>Git</summary>
+
+        <details class="sub">
+            <summary>Add submodule to the repo</summary>
+            <ol>
+                <li>git submodule add &lt;REPO-URL&gt;</li>
+                <li>git submodule init</li>
+                <li>git submodule update</li>
+            </ol>
+        </details>
+
+        <details class="sub">
+            <summary>Update submodule</summary>
+            <ol>
+                <li>git submodule update --remote</li>
+            </ol>
+        </details>
+    </details>
+
+    <!--Linux-->
+    <details>
+        <summary>Linux</summary>
+        
+        <a class="sub" href="https://docs.microsoft.com/en-us/dotnet/core/install/linux" target="_blank">Install .NET on linux</a><br>
+        <a class="sub" href="https://github.com/flightlessmango/MangoHud" target="_blank">MangoHud (msi afterburner alternative)</a><br>
+        <a class="sub" href="https://wiki.manjaro.org/index.php/Pacman_Overview" target="_blank">Human redable pacman guide (package manager)</a><br>
+        <a class="sub" href="https://www.baeldung.com/linux/network-manager" target="_blank">Network Manager guide (includes wifi connectivity instructions)</a><br>
+
+        <details class="sub">
+            <summary>Add user to sudoers</summary>
+            <ol>
+                <li>su -</li>
+                <li>usermod -aG sudo &lt;USERNAME&gt;</li>
+            </ol>
+        </details>
+
+        <details class="sub">
+            <summary>Check all disks and their names and paths</summary>
+            <ol>
+                <li>sudo fdisk -l</li>
+            </ol>
+        </details>
+
+        <details class="sub">
+            <summary>Show all drives and disks(fancy)</summary>
+            <ol>
+                <li>lsblk</li>
+            </ol>
+        </details>
+		
+		<details class="sub">
+            <summary>Show all accessible wifi networks</summary>
+            <ol>
+                <li>nmcli device wifi list</li>
+            </ol>
+        </details>
+		
+		<details class="sub">
+            <summary>Connect to the WIFI network</summary>
+            <ol>
+                <li>nmcli device wifi connect &lt;NETWORK_NAME&gt; password &lt;PASSWORD&gt;</li>
+            </ol>
+        </details>
+		
+    </details>
+
+    <!--Monogame-->
+    <details>
+        <summary>Monogame</summary>
+
+        <a class="sub" href="https://docs.monogame.net/articles/getting_started/4_adding_content.html" target="_blank">Monogame documentation</a><br>
+        <a class="sub" href="https://www.monogameextended.net/docs/" target="_blank">Monogame.Extended documentation</a><br>
+
+        <details class="sub">
+            <summary>Install MonoGame templates</summary>
+            <ol>
+                <li>dotnet new --install MonoGame.Templates.CSharp</li>
+            </ol>
+        </details>
+
+        <details class="sub">
+            <summary>Create a new project folder from MonoGame Desktop GL template</summary>
+            <ol>
+                <li>dotnet new mgdesktopgl -o &lt;PROJECT_NAME&gt;</li>
+            </ol>
+        </details>
+
+        <details class="sub">
+            <summary>Install and register mgcb tool</summary>
+            <ol>
+                <li>dotnet tool install -g dotnet-mgcb-editor</li>
+                <li>mgcb-editor --register</li>
+            </ol>
+        </details>
+
+        <details class="sub">
+            <summary>Install Monogame framework nuget package in the project</summary>
+            <ol>
+                <li>dotnet add package MonoGame.Framework.DesktopGL</li>
+            </ol>
+        </details>
+
+
+    </details>
+
+    <!--.NET-->
+    <details>
+        <summary>.NET</summary>
+        
+        <a class="sub" href="https://docs.microsoft.com/en-us/dotnet/framework/network-programming/using-tcp-services" target="_blank">Tcp connectivity</a><br>
+
+        <details class="sub">
+            <summary>Create C# console project targeting NET 3.1(force)</summary>
+            <ol>
+                <li>dotnet new console -f netcoreapp3.1 -o &lt;PROJECT_FOLDER_NAME&gt;</li>
+            </ol>
+        </details>
+
+        <details class="sub">
+            <summary>Check sdk installed versions</summary>
+            <ol>
+                <li>dotnet --list-sdks</li>
+            </ol>
+        </details>
+
+        <details class="sub">
+            <summary>Add nuget package</summary>
+            <ol>
+                <li>dotnet add package &lt;PACKAGE_NAME&gt;</li>
+            </ol>
+        </details>
+
+        <details class="sub">
+            <summary>Publish for specific OS (<a href="https://docs.microsoft.com/en-us/dotnet/core/rid-catalog" target="_blank">OS names list</a>)</summary>
+            <ol>
+                <li>dotnet publish --framework &lt;FRAMEWORK_NAME&gt; --runtime &lt;OS_NAME&gt;</li>
+            </ol>
+        </details>
+    </details>
+
+
+    <!--Vim-->
+    <details>
+        <summary>Vim</summary>
+
+        <details class="sub">
+            <summary>Undo / Redo</summary>
+            <ol>
+                <li>u</li>
+                <li>Ctrl r</li>
+            </ol>
+        </details>
+
+        <details class="sub">
+            <summary>Change focused window</summary>
+            <ol>
+                <li>Ctrl w; h/j/k/l</li>
+            </ol>
+        </details>
+
+		<details class="sub">
+            <summary>Change entire word</summary>
+            <ol>
+                <li>ciw</li>
+            </ol>
+        </details>
+
+		<details class="sub">
+            <summary>Move view up/down</summary>
+            <ol>
+                <li>Ctrl e</li>
+                <li>Ctrl y</li>
+            </ol>
+        </details>
+
+		<details class="sub">
+            <summary>Search</summary>
+            <ol>
+                <li>/&lt;SEARCH_SUBSTRING&gt;</li>
+                <li>N, n #Next/previous result</li>
+            </ol>
+        </details>
+
+</body>
+
+</html>
